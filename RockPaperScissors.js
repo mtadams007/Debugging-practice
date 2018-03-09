@@ -7,9 +7,9 @@ function randomFrom(array) {
 
 
 function checkInput(input, computerChoices) {
-  if (input === "quit") {
-    gameOver = true;
-  }
+  // if (input === "quit") {
+  //   gameOver = true;
+  // }
 
   let computerChoice = randomFrom(computerChoices);
 
@@ -27,7 +27,11 @@ function checkInput(input, computerChoices) {
     return false;
   } else if (input === "quit") {
       return true;
-  } else {
+  } else if (input !== "rock" && input !== "scissors" && input != "paper"){
+    alert("To play, please enter rock, paper, or scissors.");
+    return true
+  }
+   else {
     alert("Tie game!");
     return false;
   }
