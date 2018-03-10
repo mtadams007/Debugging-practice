@@ -23,7 +23,7 @@ function checkInput(input, computerChoices) {
     alert("Computer wins!");
     return false;
   } else if (computerChoice === input) {
-    alert("You win!");
+    alert("Tie game!");
     return false;
   } else if (input === "quit") {
       return true;
@@ -32,13 +32,13 @@ function checkInput(input, computerChoices) {
     return true
   }
    else {
-    alert("Tie game!");
+    alert("You win!");
     return false;
   }
 }
 
 function start(gameOver, computerChoices) {
-  // debugger;
+  debugger;
   while (!gameOver){
     let playerInput = prompt("Hi! Enter rock/paper/scissors to play, or quit to stop playing.").toLowerCase();
     gameOver = checkInput(playerInput, computerChoices);
